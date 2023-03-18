@@ -9,8 +9,8 @@ import re
 #       ="herit" returned just herit
 #       ="*herit" and "herit*" returned good hits but not entire words
 #       ="\w*herit*\w" grab full words but hits surrounded by -- (ie --inheritance--) cannot have tabs inserted in the write step
-
-wordsearch = "\w*herit*\w"
+#WARNING::: correct regex is "\w*herit\w*". I accidentally flipped them and i was matching words like spherical.
+wordsearch = "\w*herit\w*"
 wordcompiler = re.compile(wordsearch)
 
 with open('origin.txt', 'r') as rf:
