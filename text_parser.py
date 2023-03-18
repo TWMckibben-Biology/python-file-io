@@ -4,8 +4,8 @@ print('Hello')
 import sys
 import re
 
-wordsearch = "inheritance"
-wordcompiler = re.compile(wordsearch)
+wordsearch = "\w*herit\w*"
+wordcompiler = re.compile(wordsearch, re.IGNORECASE)
 
 with open('origin.txt', 'r') as rf:
     with open ('output_origin.txt', 'w') as wf:
