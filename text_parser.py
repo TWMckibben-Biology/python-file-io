@@ -21,7 +21,7 @@ with open('origin.txt', 'r') as rf:
                 #print(line_index)
                 #print({line_index},{hits})
                 #print(line_index,hits.group())  This is what I actually want, just need to tab separate and newline
-                wf.write('line_index\thits.group\n')
+                wf.write("{0}\t{1}\n".format(line_index, hits.group()))
 print('Goodbye')
         
 
