@@ -8,9 +8,10 @@ import re
 ####
 #       ="herit" returned just herit
 #       ="*herit" and "herit*" returned good hits but not entire words
+#       ="\w*herit*\w" grab full words but hits surrounded by -- (ie --inheritance--) cannot have tabs inserted in the write step
 
-wordsearch = "\w*herit\w*"
-wordcompiler = re.compile(wordsearch, re.IGNORECASE)
+wordsearch = "\w*herit*\w"
+wordcompiler = re.compile(wordsearch)
 
 with open('origin.txt', 'r') as rf:
     with open ('output_origin.txt', 'w') as wf:
