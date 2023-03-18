@@ -7,12 +7,8 @@ import re
 #wordsearch = "*herit*"
 #wordcompiler = re.compile(wordsearch)
 
-f = open('origin.txt')
-#hits = wordcompiler('origin.txt')
-#print(hits)
-print(f.name)
-
-f.close()
-
+with open('origin.txt', 'r') as f:
+    f_contents = f.read()
+    print (f_contents)
 
 if__name__ = '__main__'
