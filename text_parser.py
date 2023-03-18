@@ -4,11 +4,16 @@ print('Hello')
 import sys
 import re
 
-#wordsearch = "*herit*"
-#wordcompiler = re.compile(wordsearch)
+wordsearch = "inheritance"
+wordcompiler = re.compile(wordsearch)
 
-with open('origin.txt', 'r') as f:
-    f_contents = f.read()
-    print (f_contents)
+with open('origin.txt', 'r') as rf:
+    with open ('output_origin.txt', 'w') as wf:
+        for line_index, line in enumerate(rf, 1):
+            if wordcompiler.findall(line):
+                hits = wordcompiler.search(line)
+                print(hits)
+print('Goodbye')
+        
 
 if__name__ = '__main__'
